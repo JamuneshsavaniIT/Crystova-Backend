@@ -3,7 +3,6 @@ const userRoute = require("./user.route");
 const adminRoute = require("./admin.route");
 const authRoute = require("./auth.route");
 const gameRoute = require("./game.route");
-const contactUsRoute = require("./contactUs.route");
 const aboutUsRoute = require("./aboutUs.route");
 const assignmentsRoute = require("./assignments.route");
 const toDosRoute = require("./todos.route");
@@ -19,13 +18,14 @@ const registerRoute = require("./register.route");
 const productRoute=require('./products.route')
 const wishlistRoute=require('./wishlist.route')
 const categoryRoute=require('./category.route')
+const contactRoutes = require('./contact.routes');
 
 const router = express.Router();
 
 const defaultRoutes = [
   {
     path: "/auth",
-    route: authRoute,
+    route: authRoute, 
   },
   {
     path: "/event",
@@ -50,10 +50,6 @@ const defaultRoutes = [
   {
     path: "/games",
     route: gameRoute,
-  },
-  {
-    path: "/contactUs",
-    route: contactUsRoute,
   },
   {
     path: "/aboutUs",
@@ -102,6 +98,10 @@ const defaultRoutes = [
   {
     path: '/wishlist',
     route: wishlistRoute,
+  },
+  {
+    path: '/contact-us',
+    route: contactRoutes,
   },
 ];
 
